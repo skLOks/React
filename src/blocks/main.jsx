@@ -1,39 +1,31 @@
 import React from 'react';
-import {useState} from 'react';
+import Tovs from './tovs/tovs';
 import './main.css';
+import Reg from './Reg/reg'
+import Auth from './auth/auth'
+import Cart from './cart/cart'
+import Order from './orders/order'
 
-let eur, usd, kzt;
-
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom";
 
 function Main() {
-
-	const [Eur, setEur] = useState('0');
-	const [Usd, setUsd] = useState('0');
-	const [Kzt, setKzt] = useState('0');
-
-	function course() {
-		fetch('https://www.cbr-xml-daily.ru/daily_json.js')
-		.then(response => response.json())
-		.then(json => { eur = json.Valute.EUR['Value'];
-						usd = json.Valute.USD['Value'];
-						kzt = json.Valute.KZT['Value'];
-						setEur(eur);
-						setUsd(usd);
-						setKzt(kzt)});
-	}
-	
-
-
-	return (
-		<div className="main">
-			<p>€ Евро: {Eur}₽</p>
-			<p>$ Доллар: {Usd}₽</p>
-			<p>₸ Тенге: {Kzt}₽</p>
-			<button onClick = {course}>Показать курс</button>
-		</div>
-	
-	);
+  return (
+    <div className="main">
+      <Router>
+          <Routes>
+            <Route exact path="/" element={<Tovs/>} />
+            <Route exact path="/reg" element={<Reg />} />
+            <Route exact path="/auth" element={<Auth />} />
+            <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/order" element={<Order />} />
+          </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default Main;

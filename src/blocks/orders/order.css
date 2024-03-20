@@ -1,0 +1,53 @@
+* {
+	font-family: 'Varela';
+	font-size: 15px;
+	hyphens: auto;
+}
+.imgProd {
+	width: 300px;
+}
+
+.product {
+	height: 550px;
+	border: 1px solid black;
+	border-radius: 8px;
+	text-align: center;
+	margin: 10px;
+	box-shadow: 1px 2px 1px;
+}
+
+.order {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.name {
+	width: 300px;
+	color: black;
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 2em;
+}
+
+.id {
+	color: black;
+}
+.price {
+	color: black;
+}
+
+.order :first-child {
+  align-self: center;
+}
+
+button {
+	border-radius: 8px;
+	background: #de0000;
+}
+
+.order h1 {
+	font-size: 25px;
+}

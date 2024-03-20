@@ -1,32 +1,18 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
-import Header from './blocks/header'
 import Main from './blocks/main'
-import Calk from './blocks/calk'
-import Help from './blocks/help'
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
+import Header from './blocks/header/header'
+import Reg from './blocks/Reg/reg'
+
 
 function App() {
   return (
-    <div className="mainpage">
+    <div className="App">
+
       <Header/>
-      <Router>
-            <Routes>
-                <Route exact path="/" element={<Main />} />
-            </Routes>
-            <Routes>
-                <Route exact path="/calk" element={<Calk />} />
-            </Routes>
-            <Routes>
-                <Route exact path="/help" element={<Help />} />
-            </Routes>
-        </Router>
+      <Main/>
+      
     </div>
-    
   );
 }
 

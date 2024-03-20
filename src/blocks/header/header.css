@@ -1,0 +1,27 @@
+.header {
+	text-align: right;
+	height: 50px;
+	width: 100%;
+	background: black;
+}
+
+.header h1 {
+	font-size: 24px;
+	font-family: 'Varela';
+	position: absolute;
+	color: white;
+	top: -6px;
+	left: 100px;
+}
+
+.header a {
+	position: relative;
+	font-family: 'Varela';
+	display: inline-flex;
+	padding-left: 15px;
+	text-decoration: none;
+	font-size: 24px;
+	color: white;
+	right: 50px;
+	top: 5px;
+}

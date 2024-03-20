@@ -1,0 +1,49 @@
+* {
+	font-family: 'Varela';
+	font-size: 15px;
+	hyphens: auto;
+}
+.imgProd {
+	width: 300px;
+}
+
+.product {
+	height: 550px;
+	border: 1px solid black;
+	border-radius: 8px;
+	text-align: center;
+	margin: 10px;
+	box-shadow: 1px 2px 1px;
+}
+
+.tovs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.name {
+	width: 300px;
+	color: #edebeb;
+}
+
+.tovs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 2em;
+}
+
+.id {
+	color: #edebeb;
+}
+.price {
+	color: #edebeb;
+}
+
+.tovs :first-child {
+  align-self: center;
+}
+
+.addCart {
+	border-radius: 8px;
+	background: #de0000;
+}
